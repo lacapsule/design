@@ -1,0 +1,10 @@
+:root {
+    --turk: #0FA3B1;
+    --bleu: #B5E2FA;
+    --blanc: #F9F7F3;
+    --jaune: #EDDEA4;
+    --orange: #F7A072;
+}
+body {
+    background-color: var(--orange);
+}
