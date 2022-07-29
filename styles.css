@@ -24,7 +24,7 @@ main {
     align-items: center;
     justify-content: flex-start;
     width: auto;
-    height: 1600px;
+    height: auto;
 }
 section {
     display: flex;
@@ -63,13 +63,86 @@ h2 {
 h3 {
     width: 90%;
 }
-
+form {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: space-around;
+    justify-content: space-around;
+    width: 80%;
+    height: 340px;
+    padding: 10%;
+    border-radius: 50px;
+    box-shadow: 2px 2px 8px var(--ombre);
+    background: linear-gradient(25deg, var(--blanc), var(--jaune));
+}
+input {
+    width: auto;
+    height: 70px;
+    border-radius: 50px;
+    border: 2px solid var(--ombre);
+    font-size: 1.4em;
+    box-shadow: 2px 2px 8px var(--ombre);
+}
+input:not([type="submit"]) {
+    background: linear-gradient(90deg, var(--blanc), white);
+    padding-left: 25px;
+    color: var(--ombre);
+}
+[type="submit"]:hover {
+    background-color: var(--orange);
+}
+[type="submit"]:active {
+    background-color: aquamarine;
+}
+#container {
+    background-color: transparent;
+    width: 80%;
+    height: 350px;
+    border: 1px solid transparent;
+    perspective: 1000px; 
+  }
+  
+  .interieur {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  #container:hover .interieur {
+    transform: rotateY(180deg);
+  }
+  
+ .devant, .derrière {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+  }
+  
+  .devant {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  .derrière {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--turk);
+    color: white;
+    transform: rotateY(180deg);
+  }
 @media screen and (min-width: 750px) {
     main {
         flex-flow: row wrap;
         align-items: space-around;
         justify-content: space-around;
         width: 100vw;
-        height: 100vh;
+        height: auto;
     }
 }
